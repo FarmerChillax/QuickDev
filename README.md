@@ -1,2 +1,41 @@
 # QuickDev
 快速启动后端开发环境
+
+后端开发通常需要使用到 MySQL 与 redis，每次开发都要安装、配置无疑十分麻烦。本项目通过 docker-compose 将 MySQL 与 redis 打包集成，一键启动开发所需环境。
+## 环境要求
+
+- docker: `Docker Compose version v2.10.2`
+
+
+## 快速开始
+
+1. 克隆本项目
+```shell
+$ git clone https://github.com/FarmerChillax/saltedfishcloud.git
+```
+2. 进入到项目根目录
+
+```shell
+$ cd saltedfishcloud
+```
+
+3. 执行以下命令
+```shell
+$ docker-compose up -d
+```
+## 环境变量描述
+
+| 变量名              | Description                 |
+| :------------------ | :-------------------------- |
+| TZ                  | 时区设置                    |
+| NETWORKS_DRIVER     | docker 网络模式             |
+| LIMIT_MEMORY_MYSQL  | MySQL 资源限制              |
+| LIMIT_MEMORY_REDIS  | redis 资源限制              |
+| MYSQL_PORT          | MySQL 访问端口              |
+| MYSQL_DATABASE      | MySQL database 名           |
+| MYSQL_USERNAME      | MySQL 账号                  |
+| MYSQL_PASSWORD      | MySQL 密码                  |
+| MYSQL_ROOT_PASSWORD | MySQL 管理员密码            |
+| REDIS_PORT          | Redis 端口                  |
+| MySQL_PATH          | 宿主机上 MySQL 数据存放路径 |
+| REDIS_PATH          | 宿主机上 redis 数据存放路径 |
