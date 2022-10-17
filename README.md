@@ -3,20 +3,22 @@
 
 后端开发通常需要使用到 MySQL 与 redis，每次开发都要安装、配置无疑十分麻烦。本项目通过 docker-compose 将 MySQL 与 redis 打包集成，一键启动开发所需环境。
 ## 环境要求
-
 - docker: `Docker Compose version v2.10.2`
 
+## Index
+- 基础开发环境: `main` 分支
+- 微服务开发环境: `micro` 分支
 
 ## 快速开始
 
 1. 克隆本项目
 ```shell
-$ git clone https://github.com/FarmerChillax/saltedfishcloud.git
+$ git clone git@github.com:FarmerChillax/QuickDev.git
 ```
 2. 进入到项目根目录
 
 ```shell
-$ cd saltedfishcloud
+$ cd QuickDev
 ```
 
 3. 执行以下命令
