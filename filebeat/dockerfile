@@ -1,0 +1,4 @@
+FROM docker.elastic.co/beats/filebeat:8.6.1
+
+
+LABEL maintainer="FarmerChillax <farmer.notscientific@gmail.com>"

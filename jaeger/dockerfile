@@ -1,0 +1,3 @@
+FROM jaegertracing/all-in-one:latest
+
+LABEL maintainer="FarmerChillax <farmer.notscientific@gmail.com>"

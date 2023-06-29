@@ -49,9 +49,25 @@ services:
 
   # 链路追踪
   jaeger:
-    image: jaegertracing/all-in-one:latest
+    image: ./jaeger
     restart: always
     ports:
       - 16686:16686
+  
+  prometheus:
+    image: ./prometheus
+    restart: always
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus/conf/prometheus.yml:/etc/prometheus/prometheus.yml
 
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PWD}
 
