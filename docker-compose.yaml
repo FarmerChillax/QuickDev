@@ -82,12 +82,3 @@ services:
     networks:
       - devNetwork
     restart: always
-
-  jaeger:
-    build: 
-      context: ./jaeger
-    ports:
-      - "16686:16686"
-      - "14268:14268"
-    networks:
-      - devNetwork
